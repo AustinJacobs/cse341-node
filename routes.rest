@@ -1,12 +1,38 @@
 // LOCALHOST
-###
+### Get all contacts.
 GET http://localhost:8080/contacts 
-###
+
+### Get contact by ID
 GET http://localhost:8080/contacts/632e44bb60ad868d2bcabcf9
-###
-GET http://localhost:8080/contacts/632e46ce60ad868d2bcabcfa
-###
-GET http://localhost:8080/contacts/632e46f560ad868d2bcabcfb
+
+### Create a new contact.
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Sam",
+  "lastName": "Prince",
+  "email": "sgprince@gmail.com",
+  "favoriteColor": "Blue",
+  "birthday": "05/10/1970"
+}
+### Update the existing contact.
+PUT http://localhost:8080/contacts/632e44bb60ad868d2bcabcf9 HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Kai",
+  "lastName": "Jacobs",
+  "email": "kai.jacobs@gmail.com",
+  "favoriteColor": "Purple",
+  "birthday": "02/27/2021"
+}
+
+### Delete the current contact.
+DELETE http://localhost:8080/contacts/63370a522e2e532aa9954883 HTTP/1.1
+content-type: application/json
+
+// PRODUCTION
 ###
 Get https://cse341-node-br28.onrender.com/contacts
 ###
