@@ -32,6 +32,10 @@ content-type: application/json
 DELETE http://localhost:8080/contacts/63370a522e2e532aa9954883 HTTP/1.1
 content-type: application/json
 
+
+
+
+
 // PRODUCTION
 ### GET all contacts.
 GET https://cse341-node-br28.onrender.com/contacts
@@ -40,7 +44,7 @@ GET https://cse341-node-br28.onrender.com/contacts
 GET https://cse341-node-br28.onrender.com/contacts/632e44bb60ad868d2bcabcf9
 
 ### POST a new contact to db.
-POST https://cse341-node-br28.onrender.com/contacts/632e46ce60ad868d2bcabcfa HTTP/1.1
+POST https://cse341-node-br28.onrender.com/contacts HTTP/1.1
 content-type: application/json
 
 {
@@ -59,9 +63,9 @@ content-type: application/json
   "firstName": "Kai",
   "lastName": "Jacobs",
   "email": "kai.jacobs@gmail.com",
-  "favoriteColor": "Purple",
+  "favoriteColor": "Brown",
   "birthday": "02/27/2021"
 }
 
 ### DELETE contact by ID.
-DELETE https://cse341-node-br28.onrender.com/contacts/632e46f560ad868d2bcabcfb
+DELETE https://cse341-node-br28.onrender.com/contacts/63370f64b717dbd004344b7c
