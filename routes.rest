@@ -33,11 +33,35 @@ DELETE http://localhost:8080/contacts/63370a522e2e532aa9954883 HTTP/1.1
 content-type: application/json
 
 // PRODUCTION
-###
-Get https://cse341-node-br28.onrender.com/contacts
-###
+### GET all contacts.
+GET https://cse341-node-br28.onrender.com/contacts
+
+### GET contact by ID.
 GET https://cse341-node-br28.onrender.com/contacts/632e44bb60ad868d2bcabcf9
-###
-GET https://cse341-node-br28.onrender.com/contacts/632e46ce60ad868d2bcabcfa
-###
-GET https://cse341-node-br28.onrender.com/contacts/632e46f560ad868d2bcabcfb
+
+### POST a new contact to db.
+POST https://cse341-node-br28.onrender.com/contacts/632e46ce60ad868d2bcabcfa HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Sam",
+  "lastName": "Prince",
+  "email": "sgprince@gmail.com",
+  "favoriteColor": "Blue",
+  "birthday": "05/10/1970"
+}
+
+### PUT new content to contact.
+PUT https://cse341-node-br28.onrender.com/contacts/632e46f560ad868d2bcabcfb HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Kai",
+  "lastName": "Jacobs",
+  "email": "kai.jacobs@gmail.com",
+  "favoriteColor": "Purple",
+  "birthday": "02/27/2021"
+}
+
+### DELETE contact by ID.
+DELETE https://cse341-node-br28.onrender.com/contacts/632e46f560ad868d2bcabcfb

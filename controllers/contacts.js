@@ -91,6 +91,7 @@ const deleteContact = async (req, res) => {
     .fetchDb()
     .db(database_name)
     .collection('contacts')
+    // Can use deleteMany to delete multiple contacts at once.
     .deleteOne({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
