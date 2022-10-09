@@ -5,7 +5,7 @@ const doc = {
     title: 'My API',
     description: 'Contacts API',
   },
-  host: '', // leave blank for render
+  host: 'https://cse341-node-br28.onrender.com', // add render host url
   schemes: ['https'], // won't run on http. Render runs on https
 };
 
