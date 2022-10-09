@@ -3,5 +3,14 @@ const router = express.Router();
 
 router.use('/', require('./swagger'));
 router.use('/contacts', require('./contacts'));
+router.use(
+  '/',
+  (docData = (req, res) => {
+    let docData = {
+      documentationURL: 'https://cse341-node-br28.onrender.com-api-docs',
+    };
+    res.send(docData);
+  })
+);
 
 module.exports = router;
