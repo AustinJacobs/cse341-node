@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const cors = require('cors');
 
+router.use(cors);
 router.use('/api-docs', require('./swagger'));
 router.use('/contacts', require('./contacts'));
 // router.use(
